@@ -67,7 +67,7 @@ Not to mention using the following pretty much after every git command:
 ```
 git status
 ```
-Which outputs:
+Which in this case outputs:
 
 ![git status screenshot with untracked files](./assets/images/git-status-untracked.png "git status example")
 
@@ -76,3 +76,11 @@ Which outputs:
 4. Add untracked files to staging for the next commit
 ```
 git add README.md index.html assets/
+```
+
+5. Then commit changes to the local repo
+```
+git commit -m "initial commit"
+```
+
+6. 
