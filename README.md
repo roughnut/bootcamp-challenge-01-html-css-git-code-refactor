@@ -83,4 +83,28 @@ git add README.md index.html assets/
 git commit -m "initial commit"
 ```
 
-6. 
+6. Then had to hit up (or should that be "git up") Github to create a remote repo: [Bootcamp Challenge 01 - HTML, CSS & Git: Code Refactor](git@github.com:roughnut/bootcamp-challenge-01-html-css-git-code-refactor.git)
+
+7. Then connect the local repo to the remote
+```
+git remote add origin git@github.com:roughnut/bootcamp-challenge-01-html-css-git-code-refactor.git
+```
+
+8. Then push the local repo
+```
+roughnut@camp 01-html-css-git-code-refactor % git push -u origin main
+Enumerating objects: 19, done.
+Counting objects: 100% (19/19), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (18/18), done.
+Writing objects: 100% (19/19), 47.64 MiB | 2.14 MiB/s, done.
+Total 19 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To github.com:roughnut/bootcamp-challenge-01-html-css-git-code-refactor.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+roughnut@camp 01-html-css-git-code-refactor % git pull
+Already up to date.
+```
+:raised_hands:
+
