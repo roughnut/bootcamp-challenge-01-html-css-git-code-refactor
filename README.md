@@ -129,7 +129,7 @@ but a review of the index.html source code shows very few semantic elements:
 `GIVEN a webpage meets accessibility standards` <br>
 `WHEN I view the structure of the HTML elements` <br>
 `THEN I find that the elements follow a logical structure independent of styling and positioning` <br>
-Beyond the `<html>` and `<head>` tags, the elments below follow a logical structure
+Beyond the `html` and `head` tags, the elments below follow a logical structure
 
 11. Next <br>
 `GIVEN a webpage meets accessibility standards` <br>
@@ -150,7 +150,7 @@ Line 68: `alt="icon of coins and a cogwheel"` <br>
 `xWHEN I view the heading attributes` <br>
 `THEN they fall in sequential order` <br>
 <br>
-In the source code the `<h1>` tag is situated in the `<header>` the `<h2>` tags are situated in `<main>` and the `<h3>` tags are situated in the `<aside>` so they fall in sequential order <br>
+In the source code the `h1` tag is nested in the `header` the `h2` tags are nested in the `main` tag and the `h3` tags are nested in the `aside` so they fall in sequential order <br>
 
 13. Next <br>
 `GIVEN a webpage meets accessibility standards` <br>
