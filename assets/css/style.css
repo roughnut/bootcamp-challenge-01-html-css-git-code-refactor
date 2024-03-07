@@ -6,17 +6,18 @@
     margin: 0;
 }
 
-body {
-    height: 100%; /* Added height to better manage child elements */
+/* Added height:100%; to better manage child elements */
+html, body {
+    height: 100%; 
     background-color: #d9dcd6;
 }
 
-/*  Apply flexbox to fix the formatting issues */
-header { /* Changed from .header - dont' need a class here*/
+/*  Apply flexbox to fix the formatting issues & Changed from .header - dont' need a class here */
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 8%;
+    height: 12%;
     padding: 3% 0;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: #2a607c;
@@ -42,7 +43,7 @@ h1 {
 nav { 
     display: flex;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
 
 /* Can select directly with ul - don't need header nav ul */
@@ -62,88 +63,140 @@ a {
     text-decoration: none;
 }
 
-p {
-    font-size: 16px;
-}
-
 .hero {
-    height: 800px;
+    height: 75%; /* Changed from 800px to 55% for better responsiveness */
     width: 100%;
-    margin-bottom: 25px;
+    margin-bottom: 2%;
     background-image: url("../images/digital-marketing-meeting.jpg");
     background-size: cover;
     background-position: center;
 }
 
+/* Replaced the original main tag with an article tag and used main to wrap both the article and aside tags for easier styling with flexbox */
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/* Moved p selector to fit with logical structure */
+p {
+    font-weight: 300; /*reduce font weight for better readability */
+    line-height: 1.2;
+}
+
 .float-left {
     float: left;
-    margin-right: 25px;
+    margin-right: 2%;
 }
 
 .float-right {
     float: right;
-    margin-left: 25px;
+    margin-left: 2%;
 }
 
+article, aside {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+/* Remove "inline-block" property as flexbox is applying width and height rules */
 .content {
-    width: 75%;
-    display: inline-block;
-    margin-left: 20px;
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    /* align-items: stretch; */
+    margin-left: 2%;
+    margin-right: 2%;
 }
 
-.benefits {
-    margin-right: 20px;
-    padding: 20px;
-    clear: both;
-    float: right;
-    width: 20%;
-    height: 100%;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #2589bd;
-}
-
-/* Can consolidate many of the selectors below from 3 to 1 */
-.benefit-lead, .benefit-brand, .benefit-cost {
-    margin-bottom: 32px;
-    color: #ffffff;
-}
-
-.benefit-lead h3, .benefit-brand h3, .benefit-cost h3 {
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.benefit-lead img, .benefit-brand img, .benefit-cost img {
-    display: block;
-    margin: 10px auto;
-    max-width: 150px;
-}
-
+/* OMG freaking "flex-grow"!!!!! you have no idea how long it took to work that out!!!! 😉 */
 .search-engine-optimization, .online-reputation-management, .social-media-marketing {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
+    display: block;
+    flex-grow: 1;
+    margin-bottom: 2%;
+    padding: 4%;
+    /* min-height: 300px; */
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #0072bb;
     color: #ffffff;
 }
 
+/* 2% margin was preventing the .content and .benefits sections from aligning on the cross axis */
+.social-media-marketing {
+    margin-bottom: 0;
+}
+
+/* Update image properties to max-width to apply responsiveness */
 .search-engine-optimization img, .online-reputation-management img, .social-media-marketing img {
-    max-height: 200px;
+    max-width: 50%;
+    height: auto;
 }
 
 .search-engine-optimization h2, .online-reputation-management h2, .social-media-marketing h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
+    margin-bottom: 2%;
+    font-size: 2em;
 }
 
+/* Remove "float", "clear" and "min-height" properties because flexbox is applied */
+.benefits {
+    display: flex;
+    flex-grow: 1;
+    margin-right: 2%;
+    padding: 2%;
+    flex: 1;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #2589bd;
+}
+
+/* Can consolidate many of the selectors below from 3 to 1 
+margin-bottom property had to be units of vh (viewport height) because % units would be calculated based on container width... go figure 🤷🏻‍♂️ */
+
+.benefit-lead, .benefit-brand, .benefit-cost {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin-bottom: 4vh;
+    color: #ffffff;
+}
+
+.benefit-lead h3, .benefit-brand h3, .benefit-cost h3 {
+    margin-bottom: 1%;
+    text-align: center;
+}
+
+.benefit-lead img, .benefit-brand img, .benefit-cost img {
+    display: block;
+    margin: 1% auto;
+    max-width: 150px;
+}
+
+
+/* Remove clear property as floats not being used */
 .footer {
-    padding: 30px;
-    clear: both;
+    padding: 3%;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
 }
 
 .footer h2 {
-    font-size: 20px;
+    font-size: 1.2em;
+}
+
+/* Add @media queries to control size of h2 and images in article sections when the viewport is resized*/
+
+@media screen and (max-width: 768px) {
+    .search-engine-optimization h2, .online-reputation-management h2, .social-media-marketing h2 {
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .search-engine-optimization h2, .online-reputation-management h2, .social-media-marketing h2 {
+        font-size: 1em;
+    }
+    .search-engine-optimization img, .online-reputation-management img, .social-media-marketing img {
+        display: none;
+    }
 }

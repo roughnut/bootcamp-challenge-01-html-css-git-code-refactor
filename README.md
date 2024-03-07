@@ -144,14 +144,14 @@ Line 43: `alt="top down view of a desk with people working around it"` <br>
 Line 54: `alt="icon of a lead generation funnel` <br>
 Line 61: `alt="icon of a glowing light bulb"` <br>
 Line 68: `alt="icon of coins and a cogwheel"` <br>
-
+<br>
 12. Next <br>
 `GIVEN a webpage meets accessibility standards` <br>
 `xWHEN I view the heading attributes` <br>
 `THEN they fall in sequential order` <br>
 <br>
 In the source code the `h1` tag is nested in the `header` the `h2` tags are nested in the `main` tag and the `h3` tags are nested in the `aside` so they fall in sequential order <br>
-
+<br>
 13. Next <br>
 `GIVEN a webpage meets accessibility standards` <br>
 `WHEN I view the title element` <br>
@@ -168,7 +168,7 @@ which is causing the following behaviour on the site <br>
 ![broken-list-styling](./assets/images/broken-list-styling.png "broken list styling") <br>
 Also the CSS property values defined in pixels, for example `padding: 20px;` are not responsive so will cause UX issues on different screen sizes, so those values should be changed to percentages, for example `padding: 3%;`
 
-15. When
+15. The CSS style file is extensively commented to discuss the edits.
 
 
 
