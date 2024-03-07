@@ -129,47 +129,7 @@ but a review of the index.html source code shows very few semantic elements:
 `GIVEN a webpage meets accessibility standards` <br>
 `WHEN I view the structure of the HTML elements` <br>
 `THEN I find that the elements follow a logical structure independent of styling and positioning` <br>
-<br>
-Beyond the `<html>` and `<head>` tags, the elments below follow a logical structure <br>
-```
-<body>
-    <header>
-        <nav>
-            <!-- For navigation links -->
-        </nav>
-    </header>
-    <section>
-        <!-- For the hero background image -->
-    </section> 
-    <!-- The <main> section contains the primary content -->
-    <main> 
-        <section>
-            <!-- For the first service option -->
-        </section>
-        <section>
-            <!-- For the second service option -->
-        <section>
-        <section>
-            <!-- For the third service option -->
-        <section>
-    </main>
-    <!-- The <aside> contains a sidebar with additional content -->
-    <aside>
-        <section>
-            <!-- For the first benefit -->
-        </section>
-        <section>
-            <!-- For the second benefit -->
-        <section>
-        <section>
-            <!-- For the third benefit -->
-        <section>
-    </aside>
-    <footer>
-        <!-- Footer content -->
-    </footer>
-</body>
-```
+Beyond the `<html>` and `<head>` tags, the elments below follow a logical structure
 
 11. Next <br>
 `GIVEN a webpage meets accessibility standards` <br>

@@ -16,7 +16,7 @@ header { /* Changed from .header - dont' need a class here*/
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 10%;
+    height: 8%;
     padding: 3% 0;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: #2a607c;
