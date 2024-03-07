@@ -150,7 +150,7 @@ Line 68: `alt="icon of coins and a cogwheel"` <br>
 `xWHEN I view the heading attributes` <br>
 `THEN they fall in sequential order` <br>
 <br>
-In the source code, the `<h1>` tag is situated in the `<header>`, the `<h2>` tags are situated in `<main>`, and the `<h3>` tags are situated in the `<aside>`, so they fall in sequential order.
+In the source code the `<h1>` tag is situated in the `<header>` the `<h2>` tags are situated in `<main>` and the `<h3>` tags are situated in the `<aside>` so they fall in sequential order <br>
 
 13. Next <br>
 `GIVEN a webpage meets accessibility standards` <br>
