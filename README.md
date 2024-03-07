@@ -32,15 +32,15 @@ SO THAT our own site is optimized for search engines
 ```
 GIVEN a webpage meets accessibility standards
 WHEN I view the source code
-THEN I find semantic HTML elements
+THEN I find semantic HTML elements ✅
 WHEN I view the structure of the HTML elements
-THEN I find that the elements follow a logical structure independent of styling and positioning
+THEN I find that the elements follow a logical structure independent of styling and positioning ✅
 WHEN I view the icon and image elements
-THEN I find accessible alt attributes
+THEN I find accessible alt attributes ✅
 WHEN I view the heading attributes
-THEN they fall in sequential order
+THEN they fall in sequential order ✅
 WHEN I view the title element
-THEN I find a concise, descriptive title
+THEN I find a concise, descriptive title ✅
 ```
 <a id="process-learnings"></a>
 ## Process and Learnings
@@ -107,4 +107,111 @@ roughnut@camp 01-html-css-git-code-refactor % git pull
 Already up to date.
 ```
 :raised_hands:
+
+Time to jump into the user story and acceptance criteria...
+
+9. First cab off the rank is the HTML elements need to be semantic <br>
+`GIVEN a webpage meets accessibility standards` <br>
+`WHEN I view the source code` <br>
+`THEN I find semantic HTML elements` <br>
+but a review of the index.html source code shows very few semantic elements:
+
+    1. Update Line 11 - the header from <br> `<div class="header">` to `<header class="header">`
+    2. Update Line 13 - an unordered list for navigation purposes from <br> `<div>` to `<nav>`
+    3. Update Line 27 - a hero background image from <br> `<div class="hero">` to `<section class="hero">`
+    4. Update Line 28 - a container for the primary services offered by Horiseon from <br> `<div class="content">` to `<main class="content">`
+    5. Update Lines 29, 36 and 43 - containers for communicating the details of each service to clients from <br> `<div id="...">` to `<section id="...">`
+    6. Update Line 51 - a sidebar container from <br> `<div class="benefits">` to `<aside class="benefits">`
+    7. Update Lines 52, 59, 66, the sidebar sections from <br> `<div class="...">` to `<section class="...">`
+    8. Update Line 74, the footer from <br> `<div class="footer">` to `<footer class="footer">`
+
+10. Next <br>
+`GIVEN a webpage meets accessibility standards` <br>
+`WHEN I view the structure of the HTML elements` <br>
+`THEN I find that the elements follow a logical structure independent of styling and positioning` <br>
+<br>
+Beyond the `<html>` and `<head>` tags, the elments below follow a logical structure <br>
+```
+<body>
+    <header>
+        <nav>
+            <!-- For navigation links -->
+        </nav>
+    </header>
+    <section>
+        <!-- For the hero background image -->
+    </section> 
+    <!-- The <main> section contains the primary content -->
+    <main> 
+        <section>
+            <!-- For the first service option -->
+        </section>
+        <section>
+            <!-- For the second service option -->
+        <section>
+        <section>
+            <!-- For the third service option -->
+        <section>
+    </main>
+    <!-- The <aside> contains a sidebar with additional content -->
+    <aside>
+        <section>
+            <!-- For the first benefit -->
+        </section>
+        <section>
+            <!-- For the second benefit -->
+        <section>
+        <section>
+            <!-- For the third benefit -->
+        <section>
+    </aside>
+    <footer>
+        <!-- Footer content -->
+    </footer>
+</body>
+```
+
+11. Next <br>
+`GIVEN a webpage meets accessibility standards` <br>
+`WHEN I view the icon and image elements` <br>
+`THEN I find accessible alt attributes` <br>
+<br>
+None of the images or icons have `alt="..." ` attributes to help assisitive technologies describe them to disabled users. <br>
+`alt="..."` attributes were added to the following lines in the source code: <br>
+Line 30: `alt="notebook on a desk"` <br>
+Line 37: `alt="person working on a laptop computer"` <br>
+Line 43: `alt="top down view of a desk with people working around it"` <br>
+Line 54: `alt="icon of a lead generation funnel` <br>
+Line 61: `alt="icon of a glowing light bulb"` <br>
+Line 68: `alt="icon of coins and a cogwheel"` <br>
+
+12. Next <br>
+`GIVEN a webpage meets accessibility standards` <br>
+`xWHEN I view the heading attributes` <br>
+`THEN they fall in sequential order` <br>
+<br>
+In the source code, the `<h1>` tag is situated in the `<header>`, the `<h2>` tags are situated in `<main>`, and the `<h3>` tags are situated in the `<aside>`, so they fall in sequential order.
+
+13. Next <br>
+`GIVEN a webpage meets accessibility standards` <br>
+`WHEN I view the title element` <br>
+`THEN I find a concise, descriptive title` <br>
+<br>
+The existing title tag `<title>website</title>` isn't very descriptive now, is it? Let's update it to: <br>
+`<title>Horiseon | Digital Marketing Agency</title>`
+
+That takes care of the [User Story](#user-story) and [Acceptance Criteria](#acceptance-criteria) <br>
+
+14. The updates to the HTML have broken parts of the CSS as the `<div>` selectors have been changed, in the example below, to `<nav>` selectors <br>
+![broken-css-screenshot](./assets/images/broken-selectors.png "broken css selectors screenshot") <br>
+which is causing the following behaviour on the site <br>
+![broken-list-styling](./assets/images/broken-list-styling.png "broken list styling") <br>
+Also the CSS property values defined in pixels, for example `padding: 20px;` are not responsive so will cause UX issues on different screen sizes, so those values should be changed to percentages, for example `padding: 3%;`
+
+15. When
+
+
+
+
+        
 
