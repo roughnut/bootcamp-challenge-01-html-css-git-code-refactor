@@ -139,8 +139,7 @@ Beyond the `html` and `head` tags, the elments below follow a logical structure
 `GIVEN a webpage meets accessibility standards` <br>
 `WHEN I view the icon and image elements` <br>
 `THEN I find accessible alt attributes` <br>
-<br>
-None of the images or icons have `alt="..." ` attributes to help assisitive technologies describe them to disabled users. <br>
+<br>None of the images or icons have `alt="..."` attributes to help assisitive technologies describe them to disabled users. <br>
 `alt="..."` attributes were added to the following lines in the source code: <br>
 Line 30: `alt="notebook on a desk"` <br>
 Line 37: `alt="person working on a laptop computer"` <br>
@@ -148,19 +147,19 @@ Line 43: `alt="top down view of a desk with people working around it"` <br>
 Line 54: `alt="icon of a lead generation funnel` <br>
 Line 61: `alt="icon of a glowing light bulb"` <br>
 Line 68: `alt="icon of coins and a cogwheel"` <br>
-<br>
+
 12. Next <br>
 `GIVEN a webpage meets accessibility standards` <br>
 `xWHEN I view the heading attributes` <br>
 `THEN they fall in sequential order` <br>
-<br>
+
 In the source code the `h1` tag is nested in the `header` the `h2` tags are nested in the `main` tag and the `h3` tags are nested in the `aside` so they fall in sequential order <br>
-<br>
+
 13. Next <br>
 `GIVEN a webpage meets accessibility standards` <br>
 `WHEN I view the title element` <br>
 `THEN I find a concise, descriptive title` <br>
-<br>
+
 The existing title tag `<title>website</title>` isn't very descriptive now, is it? Let's update it to: <br>
 `<title>Horiseon | Digital Marketing Agency</title>`
 
