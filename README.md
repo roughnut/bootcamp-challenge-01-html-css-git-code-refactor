@@ -42,6 +42,10 @@ THEN they fall in sequential order ✅
 WHEN I view the title element
 THEN I find a concise, descriptive title ✅
 ```
+## Usage
+
+NOTE: The completed site is [deployed to Github pages](https://roughnut.github.io/bootcamp-challenge-01-html-css-git-code-refactor/ "link to deployed site on Github pages").
+
 <a id="process-learnings"></a>
 ## Process and Learnings
 
@@ -169,6 +173,8 @@ which is causing the following behaviour on the site <br>
 Also the CSS property values defined in pixels, for example `padding: 20px;` are not responsive so will cause UX issues on different screen sizes, so those values should be changed to percentages, for example `padding: 3%;`
 
 15. The CSS style file is extensively commented to discuss the edits.
+
+16. Thank you! :pray: :raised_hands:
 
 
 

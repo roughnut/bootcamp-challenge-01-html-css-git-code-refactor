@@ -64,7 +64,7 @@ a {
 }
 
 .hero {
-    height: 75%; /* Changed from 800px to 55% for better responsiveness */
+    height: 55%; /* Changed from 800px to 55% for better responsiveness */
     width: 100%;
     margin-bottom: 2%;
     background-image: url("../images/digital-marketing-meeting.jpg");
